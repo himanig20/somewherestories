@@ -443,6 +443,56 @@
       .reel-card{rotate:0deg!important;translate:0 0!important}
     }
 
+
+    /* Balanced video showcase and restored still-photography portfolio */
+    .work-section .reel-section{height:auto!important;min-height:0;margin:76px 0 0!important;padding:66px max(7vw,calc((100vw - 1160px)/2)) 54px;background:#dfe8df;overflow:visible}
+    .reel-heading{width:100%;max-width:1160px;margin:0 auto 34px;display:flex;justify-content:space-between;align-items:end;gap:24px}
+    .reel-heading h2{font:400 clamp(38px,4.8vw,58px)/1.04 var(--serif);letter-spacing:-.04em;margin:12px 0 0}
+    .reel-heading p{max-width:290px;line-height:1.8;color:var(--muted);font-size:12px;margin:0}
+    .reel-track{width:100%;display:flex;justify-content:center;align-items:flex-start;gap:clamp(24px,5vw,68px);padding:0;margin:0 auto;transform:none!important}
+    .reel-card{width:clamp(155px,17vw,205px);flex:0 1 205px;transform:none!important;rotate:0deg!important;translate:0 0!important}
+    .reel-phone{width:100%;aspect-ratio:9/16.5;border:6px solid #1c2929;border-radius:24px;box-shadow:0 18px 36px -24px #14232299}
+    .reel-phone .memory-fill{border-radius:17px}
+    .reel-play{width:42px;height:42px}
+    .reel-caption{font-size:10px;line-height:1.65;margin:14px 3px 0;max-width:none}
+    .reel-caption b{font-size:8px;letter-spacing:.13em;color:#82958a}
+    .reel-footnote{max-width:1160px;margin:30px auto 0;padding-top:15px;border-top:1px solid #263b3d25;font-size:8px;letter-spacing:.17em;color:#73817d}
+    .photo-stories{padding:76px max(7vw,calc((100vw - 1160px)/2)) 82px;background:#f7f5ef}
+    .photo-stories-head{display:flex;justify-content:space-between;align-items:end;gap:25px;margin:0 auto 30px;max-width:1160px}
+    .photo-stories-head h2{font:400 clamp(39px,4.8vw,59px)/1.04 var(--serif);letter-spacing:-.04em;margin:12px 0 0}
+    .photo-stories-head h2 em{color:#718b83}
+    .photo-stories-head>p{max-width:300px;margin:0;color:var(--muted);font-size:12px;line-height:1.8}
+    .photo-grid{max-width:1160px;margin:auto;display:grid;grid-template-columns:1.12fr .88fr .88fr;grid-template-rows:220px 220px;gap:13px}
+    .photo-tile{position:relative;margin:0;overflow:hidden;background:#dce5dc;min-width:0}
+    .photo-tile img{width:100%;height:100%;object-fit:cover;display:block;filter:saturate(.88);transition:transform .7s}
+    .photo-tile:hover img{transform:scale(1.04)}
+    .photo-tile:after{content:"";position:absolute;inset:35% 0 0;background:linear-gradient(transparent,#14232280)}
+    .photo-tile span{position:absolute;top:12px;left:12px;z-index:2;padding:6px 8px;background:#f7f5efed;color:var(--ink);font-size:7px;letter-spacing:.15em}
+    .photo-tile figcaption{position:absolute;z-index:2;left:17px;bottom:15px;color:white;font:italic 20px var(--serif)}
+    .photo-tile-tall{grid-row:span 2}
+    .photo-tile-wide{grid-column:2 / 4}
+    .photo-disclaimer{max-width:1160px;margin:16px auto 0;color:var(--muted);font-size:9px;letter-spacing:.03em}
+    @media(max-width:800px){
+      .work-section .reel-section{padding:52px 6vw 44px;margin-top:48px!important}
+      .reel-heading,.photo-stories-head{display:block}
+      .reel-heading p,.photo-stories-head>p{margin-top:13px}
+      .reel-track{justify-content:center;gap:16px}
+      .reel-card{width:clamp(125px,27vw,180px);flex:1 1 0}
+      .reel-phone{border-width:5px;border-radius:19px}
+      .photo-stories{padding:58px 6vw 62px}
+      .photo-grid{grid-template-columns:1fr 1fr;grid-template-rows:210px 170px 170px;gap:9px}
+      .photo-tile-tall{grid-row:span 2}
+      .photo-tile-wide{grid-column:1 / 3}
+    }
+    @media(max-width:480px){
+      .reel-track{justify-content:flex-start;overflow-x:auto;padding:0 1px 14px;scroll-snap-type:x mandatory}
+      .reel-card{flex:0 0 43vw;width:43vw;scroll-snap-align:center}
+      .reel-phone{border-width:5px;border-radius:18px}
+      .reel-caption{font-size:9px}
+      .photo-grid{grid-template-rows:190px 145px 145px}
+      .photo-tile figcaption{font-size:16px;left:11px;bottom:10px}
+    }
+
   </style>
 </head>
 <body>
@@ -479,13 +529,24 @@
       </div>
       </div>
     <div class="reel-section" id="reels">
-      <div class="reel-sticky">
-        <div class="reel-heading"><div><div class="eyebrow">Short-form video concepts</div><h2>Stay reels & guest POV</h2></div><p>Three story directions we can shape around the character of each property.</p></div>
-        <div class="reel-track" id="reelTrack"></div>
-        <div class="reel-progress"><i id="reelProgress"></i></div>
-      </div>
+      <div class="reel-heading"><div><div class="eyebrow">Short-form video concepts</div><h2>Stories in motion.</h2></div><p>Three ways a stay can come to life through a short, guest-perspective film.</p></div>
+      <div class="reel-track" id="reelTrack"></div>
+      <div class="reel-footnote">CONCEPT DIRECTIONS · 15–30 SECOND VERTICAL FILMS</div>
     </div>
 
+      <section class="photo-stories" aria-labelledby="photo-stories-title">
+        <div class="photo-stories-head">
+          <div><div class="eyebrow">Still moments</div><h2 id="photo-stories-title">The art of <em>noticing.</em></h2></div>
+          <p>Rooms, rituals and little details. A few examples of the visual stories we can create for a stay.</p>
+        </div>
+        <div class="photo-grid">
+          <figure class="photo-tile photo-tile-tall"><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1611892440504-42a792e24d32?auto=format&fit=crop&w=900&q=85" alt="Calm boutique hotel bedroom with warm natural light"><figcaption>Spaces to settle into</figcaption><span>CONCEPT</span></figure>
+          <figure class="photo-tile"><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=800&q=85" alt="Coffee being prepared for a slow morning"><figcaption>Slow morning rituals</figcaption><span>CONCEPT</span></figure>
+          <figure class="photo-tile"><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?auto=format&fit=crop&w=800&q=85" alt="Warmly lit restaurant interior ready for guests"><figcaption>Gather around the table</figcaption><span>CONCEPT</span></figure>
+          <figure class="photo-tile photo-tile-wide"><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=1200&q=85" alt="Mountain lake and green landscape in soft daylight"><figcaption>Somewhere to get away</figcaption><span>CONCEPT</span></figure>
+        </div>
+        <p class="photo-disclaimer">Visual references for the kind of photography we create. Client and original work will be added here as we shoot.</p>
+      </section>
       <div class="work-note"><span class="work-note-mark">✳</span><p>We look for the details that make a place feel like <em>somewhere.</em></p><span class="work-note-caption">A point of view, not just a room tour.</span></div>
     </section>
 
@@ -532,7 +593,7 @@
       ['A room to remember','A guest-perspective reveal of the room and its details.','tone-1'],
       ['The golden hour edit','The property as the light changes through the evening.','tone-5']
     ];
-    reelTrack.innerHTML = reelBriefs.map((item,i) => '<article class="reel-card"><div class="reel-phone"><div class="memory-fill '+item[2]+'" style="position:absolute;inset:0"></div><div class="reel-play">▶</div></div><p class="reel-caption"><b>Story '+String(i+1).padStart(2,'0')+'</b><br>'+item[0]+'<br>'+item[1]+'</p></article>').join('');
+    reelTrack.innerHTML = reelBriefs.map((item,i) => '<article class="reel-card"><div class="reel-phone"><div class="memory-fill '+item[2]+'" style="position:absolute;inset:0"></div><div class="reel-play">▶</div></div><p class="reel-caption"><b>0'+(i+1)+' / VIDEO CONCEPT</b><br>'+item[0]+'<br>'+item[1]+'</p></article>').join('');
     const reelCards = [...document.querySelectorAll('.reel-card')];
     const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     let stripOffsets = [0,0], lastScroll = window.scrollY;
@@ -549,23 +610,10 @@
     document.querySelectorAll('.memory-tile').forEach(tile => memoryObserver.observe(tile));
 
     function updateStoryMotion(){
-      const y = window.scrollY;
-      const bounds = reelSection.getBoundingClientRect();
-      const range = Math.max(1, reelSection.offsetHeight - window.innerHeight);
-      const progress = Math.min(1,Math.max(0,-bounds.top/range));
-      const maxShift = Math.max(0,reelTrack.scrollWidth-window.innerWidth+40);
-      reelTrack.style.transform = 'translateX('+(-progress*maxShift)+'px)';
-      reelProgress.style.width = (progress*100)+'%';
-      reelCards.forEach(card => {
-        const rect=card.getBoundingClientRect(),center=(rect.left+rect.width/2-window.innerWidth/2)/window.innerWidth;
-        card.style.rotate=(center*5)+'deg';
-        card.style.translate='0 '+(Math.abs(center)*24)+'px';
-      });
-      lastScroll=y;
+      reelProgress.style.width = '100%';
+      reelCards.forEach(card => { card.style.transform='none'; card.style.rotate='0deg'; card.style.translate='0 0'; });
     }
     let storyTick=false;
-    window.addEventListener('scroll',()=>{if(!storyTick){storyTick=true;requestAnimationFrame(()=>{updateStoryMotion();storyTick=false})}},{passive:true});
-    window.addEventListener('resize',updateStoryMotion);
     updateStoryMotion();
 
     if(!reducedMotion){
