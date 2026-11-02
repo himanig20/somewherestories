@@ -33,8 +33,8 @@
     .contact{background:#dce5dc;padding:110px 0 95px;text-align:center}.contact h2{font:400 clamp(48px,7vw,88px)/1.05 var(--serif);letter-spacing:-.05em;margin:20px auto;max-width:800px}.contact p{font-size:13px;color:#667975;max-width:430px;margin:0 auto 28px}.contact .button{background:var(--deep)}
     footer{padding:27px 0;background:var(--deep);color:#dfe7df}.footer-inner{display:flex;justify-content:space-between;gap:20px;align-items:center}.footer-brand{font:400 20px var(--serif)}footer small{font-size:9px;letter-spacing:.13em;text-transform:uppercase;color:#b8c7bd}
     .reveal{opacity:0;transform:translateY(24px);transition:opacity .8s ease,transform .8s ease}.reveal.visible{opacity:1;transform:none}
-    @media(max-width:800px){.nav-inner{height:68px}.nav-links{gap:15px;font-size:9px}.nav-cta{display:none}.hero{height:auto;min-height:0;padding:125px 0 70px}.hero-grid{grid-template-columns:1fr;gap:30px}.hero h1{font-size:clamp(58px,14vw,90px)}.hero-visual{height:500px}.hero-photo{inset:0 8% 3% 8%}.hero-stamp{width:120px;height:120px;font-size:16px}.hero-note{display:none}.intro{padding:90px 0}.section-head{display:block}.section-head p{margin-top:18px}.stories{padding:80px 0}.story-grid{grid-template-columns:1fr 1fr;gap:25px 14px}.story-card:nth-child(2),.story-card:nth-child(3){margin-top:0}.story-card:last-child{display:none}.story-image{height:310px}.story-meta h3{font-size:21px}.about{padding:90px 0}.about-grid{grid-template-columns:1fr;gap:50px}.about-image{height:480px}.about-copy h2{font-size:54px}.offer{padding:85px 0}.offer-grid{grid-template-columns:1fr}.offer-item,.offer-item+.offer-item{padding:24px 0;border-right:0;border-bottom:1px solid #ffffff35}.offer-item:last-child{border-bottom:0}.offer-item h3{margin:12px 0 8px}.process{padding:90px 0}.process-grid{grid-template-columns:1fr;gap:40px}.contact{padding:85px 0}.footer-inner{flex-direction:column;text-align:center}}
-    @media(max-width:480px){.wrap{width:88vw}.nav-links a:nth-child(2){display:inline}.nav-links{gap:18px}.brand{font-size:17px}.hero-visual{height:390px}.story-grid{grid-template-columns:1fr}.story-card:nth-child(3){display:none}.story-image{height:390px}.about-image{height:400px}.about-image:after{font-size:18px;padding:17px}.ticker{padding:14px 0}.ticker-track{font-size:17px}}
+    @media(max-width:800px){.nav-inner{height:68px}.nav-links{gap:15px;font-size:9px}.nav-cta{display:none}.hero{height:auto;min-height:0;padding:125px 0 70px}.hero-grid{grid-template-columns:1fr;gap:30px}.hero h1{font-size:clamp(58px,14vw,90px)}.hero-visual{height:500px}.hero-photo{inset:0 8% 3% 8%}.hero-stamp{width:120px;height:120px;font-size:16px}.hero-note{display:none}.intro{padding:90px 0}.section-head{display:block}.section-head p{margin-top:18px}.stories{padding:80px 0}.story-grid{grid-template-columns:1fr 1fr;gap:25px 14px}.story-card:nth-child(2),.story-card:nth-child(3){margin-top:0}.story-card:last-child{display:block}.story-image{height:310px}.story-meta h3{font-size:21px}.about{padding:90px 0}.about-grid{grid-template-columns:1fr;gap:50px}.about-image{height:480px}.about-copy h2{font-size:54px}.offer{padding:85px 0}.offer-grid{grid-template-columns:1fr}.offer-item,.offer-item+.offer-item{padding:24px 0;border-right:0;border-bottom:1px solid #ffffff35}.offer-item:last-child{border-bottom:0}.offer-item h3{margin:12px 0 8px}.process{padding:90px 0}.process-grid{grid-template-columns:1fr;gap:40px}.contact{padding:85px 0}.footer-inner{flex-direction:column;text-align:center}}
+    @media(max-width:480px){.wrap{width:88vw}.nav-links a:nth-child(2){display:inline}.nav-links{gap:10px;font-size:8px}.brand{font-size:17px}.hero-visual{height:390px}.story-grid{grid-template-columns:1fr}.story-card:nth-child(3){display:block}.story-image{height:390px}.about-image{height:400px}.about-image:after{font-size:18px;padding:17px}.ticker{padding:14px 0}.ticker-track{font-size:17px}}
     @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.ticker-track{animation:none}.reveal{opacity:1;transform:none;transition:none}*{transition:none!important}}
 
     /* Original reel, memory-frame and moodboard interactions, restyled to match this design */
@@ -70,7 +70,7 @@
     .moment-row+.moment-row{margin-top:5px}
     .moment-card{position:relative;flex:none;height:clamp(145px,21vw,225px);overflow:hidden;border-radius:3px}
     .moment-card:nth-child(3n+1){width:clamp(175px,24vw,260px)}.moment-card:nth-child(3n+2){width:clamp(125px,17vw,185px)}.moment-card:nth-child(3n){width:clamp(220px,31vw,335px)}
-    .moment-card .memory-fill{position:absolute;inset:0;transition:transform .8s}.moment-card:hover .memory-fill{transform:scale(1.08)}
+    .moment-card .memory-fill{position:absolute;inset:0;transition:transform .8s}.moment-card:before{content:'CONCEPT';position:absolute;z-index:2;top:9px;left:10px;padding:5px 7px;background:rgba(245,243,237,.9);color:var(--ink);font:600 7px var(--sans);letter-spacing:.14em}.moment-card:hover .memory-fill{transform:scale(1.08)}
     .moment-card em{position:absolute;left:12px;bottom:10px;color:white;font:italic 17px var(--serif);text-shadow:0 1px 8px #0006}
     .vision-section{padding:110px 0 125px;background:var(--sage)}
     .vision-heading{margin-bottom:28px}.vision-heading p{max-width:510px;color:#647576;font-size:13px;margin:18px 0 0}
@@ -121,8 +121,6 @@
     .sister-monogram{width:42px;height:42px;border-radius:50%;display:grid;place-items:center;background:var(--sage);font:italic 22px var(--serif);color:var(--deep)}
     .sister-card strong,.sister-card span{display:block}.sister-card strong{font:400 17px var(--serif)}.sister-card span{font-size:9px;letter-spacing:.12em;text-transform:uppercase;color:var(--muted)}
     .signature span{display:block;font:500 10px var(--sans);letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-top:7px}
-    .contact-details{display:flex;justify-content:center;gap:22px;flex-wrap:wrap;font-size:12px;color:var(--ink);margin-top:22px}
-    .story-image:after{content:'CONCEPT'}
     .reel-caption:before{content:'CONCEPT';display:inline-block;margin-bottom:5px;padding:3px 6px;background:var(--sage);font-size:8px;letter-spacing:.13em;color:var(--deep)}
     .memory-section{padding-bottom:25px}
     .moments-section{padding:22px 0 75px}
@@ -187,6 +185,7 @@
         <div class="sister-card"><div class="sister-monogram">H</div><div><strong>Himani</strong><span>Co-founder</span></div></div>
         <div class="sister-card"><div class="sister-monogram">M</div><div><strong>Medha</strong><span>Co-founder</span></div></div>
       </div>
+      </div>
     </div></section>
     <section class="offer" id="offer"><div class="wrap">
       <div class="section-head reveal"><div><div class="eyebrow">Video, photos and a simple plan</div><h2>What we <em class="italic">make.</em></h2></div><p>Short-form content for boutique stays, homestays, villas and cafés.</p></div>
@@ -205,7 +204,7 @@
       </div>
       <div class="deliverables reveal"><div class="eyebrow">What you get</div><p><span>1 vertical reel, 15 to 30 sec</span><span>8 to 10 edited photos</span><span>Delivered within 7 days of the stay</span><span>Free to use on your own channels</span><span>One round of small edits</span></p></div>
     </div></section>
-    <section class="contact" id="contact"><div class="wrap reveal"><div class="eyebrow">For stays, spaces & good stories</div><h2>Have a place<br>in <em class="italic">mind?</em></h2><p>Tell us what makes it special. We’ll write back soon.</p><div class="contact-details" id="contact-details"><span>Email and Instagram details will be added here.</span></div></div></section>
+    <section class="contact" id="contact"><div class="wrap reveal"><div class="eyebrow">For stays, spaces & good stories</div><h2>Have a place<br>in <em class="italic">mind?</em></h2><p>Tell us what makes it special. We’ll write back soon.</p></div></section>
   </main>
   <footer><div class="wrap footer-inner"><div class="footer-brand">somewhere stories</div><small>Travel · Stays · Storytelling</small><small>© <span id="year"></span> Somewhere Stories</small></div></footer>
   <script>
