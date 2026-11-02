@@ -89,6 +89,23 @@
     @media(max-width:800px){.reel-heading,.memory-heading{display:block}.reel-heading p,.memory-heading p{margin-top:15px}.memory-grid{grid-template-columns:repeat(2,1fr);grid-auto-rows:135px}.reel-section{height:260vh}.reel-card{width:min(205px,62vw)}.vision-section{padding:85px 0}.moments-section{padding:60px 0}}
     @media(max-width:480px){.memory-grid{grid-auto-rows:115px;gap:7px}.reel-heading h2,.memory-heading h2,.vision-heading h2{font-size:39px}.reel-heading{margin-bottom:12px}.reel-section{height:245vh}.reel-sticky{padding-top:75px}.reel-card{width:190px}.vision-moodboard{grid-auto-rows:60px}}
     @media(prefers-reduced-motion:reduce){.reel-card,.moment-row,.memory-tile,.memory-fill{transition:none!important;animation:none!important}}
+    /* Clear, editorial deliverables layout */
+    .deliverables{margin-top:42px;padding-top:30px;border-top:1px solid #ffffff35}
+    .deliverables-heading{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:22px}
+    .deliverables-heading h3{font:400 clamp(30px,3.8vw,43px)/1.1 var(--serif);color:#f5f3ed;margin:10px 0 0;letter-spacing:-.03em}
+    .deliverables-heading>p{max-width:280px;color:#c0cbc4;font-size:12px;margin:0}
+    .deliverable-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px}
+    .deliverable-card{position:relative;display:grid;grid-template-columns:36px 1fr auto;align-items:start;gap:13px;padding:22px 20px;background:#f5f3ed;color:var(--ink);min-height:132px}
+    .deliverable-number{font:italic 17px var(--serif);color:#82958a}
+    .deliverable-card h4{font:400 22px/1.2 var(--serif);margin:0 0 8px}
+    .deliverable-card p{font-size:11px;line-height:1.7;color:#647576;margin:0;max-width:330px}
+    .deliverable-tag{font-size:7px;letter-spacing:.14em;color:#718080;border:1px solid #d9ded8;padding:5px 7px;white-space:nowrap}
+    .deliverables-included{display:grid;grid-template-columns:130px 1fr;gap:20px;align-items:start;padding:19px 0 0;margin-top:15px;border-top:1px solid #ffffff35}
+    .deliverables-included>span{font-size:9px;letter-spacing:.16em;color:#a9bdb2}
+    .deliverables-included p{font-size:11px;line-height:1.8;color:#e1e9e2;margin:0;max-width:650px}
+    .contact-email-placeholder{display:inline-block;margin-top:8px;padding:12px 19px;border:1px solid #718b83;border-radius:99px;color:var(--deep);font-size:10px;letter-spacing:.1em;text-transform:uppercase}
+    @media(max-width:800px){.deliverables-heading{display:block}.deliverables-heading>p{margin-top:10px}.deliverable-grid{grid-template-columns:1fr}.deliverable-card{min-height:0}.deliverables-included{grid-template-columns:1fr;gap:8px}.contact-email-placeholder{font-size:9px}}
+
     .memory-tile{clip-path:none!important;opacity:1!important;visibility:visible!important}
     .memory-tile .memory-fill{display:block!important;opacity:1!important}
 
@@ -130,7 +147,7 @@
 <body>
   <nav class="nav"><div class="nav-inner">
     <a class="brand" href="#top">somewhere stories<small>travel · stays · storytelling</small></a>
-    <div class="nav-links"><a href="#work">Work</a><a href="#about">About</a><a href="#offer">What we make</a><a class="nav-cta" href="#contact">Say hello</a></div>
+    <div class="nav-links"><a href="#about">Meet us</a><a href="#work">Our work</a><a href="#offer">What we make</a><a class="nav-cta" href="#contact">Contact</a></div>
   </div></nav>
   <main id="top">
     <section class="hero"><div class="wrap hero-grid">
@@ -141,6 +158,15 @@
         <div class="actions"><a class="button" href="#contact">Say hello <span>↗</span></a><a class="text-link" href="#work">See our work</a></div>
       </div>
       <div class="hero-visual"><div class="hero-note">A collection of moments, near and far</div><div class="hero-photo"><img src="https://images.unsplash.com/photo-1445019980597-93fa8acb246c?auto=format&fit=crop&w=1300&q=85" alt="Quiet boutique hotel room with warm natural light"></div><div class="hero-stamp">A place to<br>pause, notice<br>& remember.</div></div>
+    </div></section>
+    <section class="about" id="about"><div class="wrap about-grid">
+      <div class="about-image reveal"><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=1000&q=85" alt="A peaceful mountain lake surrounded by forest"></div>
+      <div class="about-copy reveal"><div class="eyebrow">A little about us</div><h2>Hi, we’re Himani and Medha.</h2><p>We’re sisters who love travel, and we got into making content because we kept noticing the same things: the morning light, a good breakfast table, the corner of a room that makes you want to stay longer. Somewhere Stories is where we turn that into short videos and photos.</p><p>Some trips it’s one of us, some trips it’s both, and every stay gets the same attention. We’re just getting started, so we keep things simple and do them well: one reel, a set of photos, delivered on time.</p><div class="signature">See you somewhere,<br><span>Himani &amp; Medha</span></div>
+      <div class="sister-cards">
+        <div class="sister-card"><div class="sister-monogram">H</div><div><strong>Himani</strong><span>Co-founder</span></div></div>
+        <div class="sister-card"><div class="sister-monogram">M</div><div><strong>Medha</strong><span>Co-founder</span></div></div>
+      </div>
+      </div>
     </div></section>
     <section class="stories work-section" id="work">
       <div class="wrap">
@@ -177,15 +203,6 @@
       </div>
     </section>
 
-    <section class="about" id="about"><div class="wrap about-grid">
-      <div class="about-image reveal"><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=1000&q=85" alt="A peaceful mountain lake surrounded by forest"></div>
-      <div class="about-copy reveal"><div class="eyebrow">A little about us</div><h2>Hi, we’re Himani and Medha.</h2><p>We’re sisters who love travel, and we got into making content because we kept noticing the same things: the morning light, a good breakfast table, the corner of a room that makes you want to stay longer. Somewhere Stories is where we turn that into short videos and photos.</p><p>Some trips it’s one of us, some trips it’s both, and every stay gets the same attention. We’re just getting started, so we keep things simple and do them well: one reel, a set of photos, delivered on time.</p><div class="signature">See you somewhere,<br><span>Himani &amp; Medha</span></div>
-      <div class="sister-cards">
-        <div class="sister-card"><div class="sister-monogram">H</div><div><strong>Himani</strong><span>Co-founder</span></div></div>
-        <div class="sister-card"><div class="sister-monogram">M</div><div><strong>Medha</strong><span>Co-founder</span></div></div>
-      </div>
-      </div>
-    </div></section>
     <section class="offer" id="offer"><div class="wrap">
       <div class="section-head reveal"><div><div class="eyebrow">Video, photos and a simple plan</div><h2>What we <em class="italic">make.</em></h2></div><p>Short-form content for boutique stays, homestays, villas and cafés.</p></div>
       <div class="offer-grid">
@@ -201,9 +218,18 @@
           <div><span>03</span><h3>Get the edit</h3><p>Your content arrives within 7 days.</p></div>
         </div>
       </div>
-      <div class="deliverables reveal"><div class="eyebrow">What you get</div><p><span>1 vertical reel, 15 to 30 sec</span><span>8 to 10 edited photos</span><span>Delivered within 7 days of the stay</span><span>Free to use on your own channels</span><span>One round of small edits</span></p></div>
+      <div class="deliverables reveal">
+        <div class="deliverables-heading"><div><div class="eyebrow">The content package</div><h3>What you’ll receive.</h3></div><p>Everything your property needs for a fresh set of stories.</p></div>
+        <div class="deliverable-grid">
+          <article class="deliverable-card"><span class="deliverable-number">01</span><div><h4>One short-form reel</h4><p>A vertical video, 15 to 30 seconds, edited with music and captions.</p></div><span class="deliverable-tag">VIDEO</span></article>
+          <article class="deliverable-card"><span class="deliverable-number">02</span><div><h4>8 to 10 edited photos</h4><p>A mix of rooms, details, food and the atmosphere of your property.</p></div><span class="deliverable-tag">PHOTOGRAPHY</span></article>
+          <article class="deliverable-card"><span class="deliverable-number">03</span><div><h4>Delivery within 7 days</h4><p>Your edited content, ready to share after the stay.</p></div><span class="deliverable-tag">TURNAROUND</span></article>
+          <article class="deliverable-card"><span class="deliverable-number">04</span><div><h4>One round of minor edits</h4><p>A chance to fine-tune the final content.</p></div><span class="deliverable-tag">REFINEMENT</span></article>
+        </div>
+        <div class="deliverables-included"><span>ALSO INCLUDED</span><p>A property-specific mood board and shot list before we shoot, plus usage on your own organic social channels.</p></div>
+      </div>
     </div></section>
-    <section class="contact" id="contact"><div class="wrap reveal"><div class="eyebrow">For stays, spaces & good stories</div><h2>Have a place<br>in <em class="italic">mind?</em></h2><p>Tell us what makes it special. We’ll write back soon.</p></div></section>
+    <section class="contact" id="contact"><div class="wrap reveal"><div class="eyebrow">For stays, spaces & good stories</div><h2>Have a place<br>in <em class="italic">mind?</em></h2><p>Tell us what makes it special. We’d love to hear about your property and the stories we could create together.</p><div class="contact-email-placeholder">Collaboration enquiries · Email contact coming soon</div></div></section>
   </main>
   <footer><div class="wrap footer-inner"><div class="footer-brand">somewhere stories</div><small>Travel · Stays · Storytelling</small><small>© <span id="year"></span> Somewhere Stories</small></div></footer>
   <script>
