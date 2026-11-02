@@ -284,6 +284,165 @@
       .moment-row{transform:none!important}
     }
 
+
+    /* A more intentional studio layout: fewer assets, stronger editorial structure */
+    :root{--paper:#f7f5ef;--ink:#263b3d;--muted:#73817d;--line:#d9dfd8;--sage:#e4ebe2;--deep:#263f40;--serif:'Playfair Display',Georgia,serif;--sans:'DM Sans',Arial,sans-serif}
+    body{background:var(--paper);font-size:15px}
+    .wrap{width:min(1160px,86vw)}
+    .nav{background:rgba(247,245,239,.94);border-bottom:1px solid #263b3d12}
+    .nav-inner{width:min(1240px,88vw);height:78px}
+    .brand{font-size:21px}
+    .nav-links{gap:27px;font-size:10px}
+    .nav-cta{background:var(--deep);color:#fff;border-color:var(--deep);padding:10px 18px}
+    .hero{min-height:760px;height:min(880px,96svh);padding:130px 0 62px;background:var(--paper)}
+    .hero-grid{grid-template-columns:.9fr 1.1fr;gap:6vw}
+    .hero-copy{padding:0}
+    .hero-copy .eyebrow{display:flex;align-items:center;gap:10px}
+    .hero-copy .eyebrow:before{content:"";width:28px;height:1px;background:#82998d}
+    .hero h1{font-size:clamp(64px,7.6vw,108px);line-height:.94;letter-spacing:-.06em;margin:25px 0 24px}
+    .hero-copy p{font-size:14px;line-height:1.85;max-width:385px}
+    .hero-visual{height:570px}
+    .hero-photo{inset:0 7% 5% 8%;border-radius:48% 48% 2px 2px}
+    .hero-photo img{filter:saturate(.82)}
+    .hero-stamp{width:140px;height:140px;font-size:18px;background:#dce6db}
+    .hero-note{font-size:8px}
+    .button{border-radius:2px;padding:15px 22px;letter-spacing:.12em}
+    .text-link{border-bottom:1px solid #82998d}
+    .about{padding:105px 0 112px;background:#f0f1e9}
+    .about-grid{grid-template-columns:.9fr 1.1fr;gap:8vw}
+    .about-image{height:500px}
+    .about-image img{width:88%;object-position:center;border-radius:2px}
+    .about-image:after{right:0;bottom:26px;padding:18px 22px;font-size:19px}
+    .about-copy h2{font-size:clamp(42px,5vw,64px);max-width:520px;line-height:1.04}
+    .about-copy p{font-size:13px;line-height:1.9;max-width:535px}
+    .sister-cards{margin-top:24px}
+    .sister-card{background:#f8f7f2;border:1px solid #dce2da;min-width:155px;padding:11px 13px}
+    .stories{padding:90px 0 0;background:#e9eee8}
+    .work-section .wrap{padding-bottom:0}
+    .section-head{margin-bottom:32px}
+    .section-head h2{font-size:clamp(42px,5vw,62px)}
+    .section-head p{font-size:12px;line-height:1.8}
+    .story-grid{grid-template-columns:1.08fr .92fr .92fr;gap:16px;align-items:start}
+    .story-card:nth-child(2){margin-top:52px}
+    .story-card:nth-child(3){margin-top:12px}
+    .story-image{height:clamp(260px,32vw,390px);border-radius:2px}
+    .story-image img{filter:saturate(.86)}
+    .story-meta h3{font-size:23px}
+    .story-meta p{font-size:9px}
+    .story-meta>span{color:#82958a;font:italic 15px var(--serif)}
+    .work-section .reel-section{height:175vh;margin:65px calc((86vw - min(1160px,86vw))/ -2) 0;background:#dfe8df}
+    .reel-sticky{padding:76px 0 25px}
+    .reel-heading{width:min(1160px,86vw);margin-bottom:14px}
+    .reel-heading h2{font-size:clamp(38px,4.8vw,58px)}
+    .reel-heading p{max-width:270px;line-height:1.8}
+    .reel-track{gap:24px;padding:12px 8vw 18px}
+    .reel-card{width:min(195px,52vw)}
+    .reel-phone{border:6px solid #1c2929;border-radius:23px;box-shadow:0 20px 40px -24px #10201f99}
+    .reel-caption{font-size:10px;max-width:205px}
+    .reel-progress{height:2px}
+    .work-note{display:grid;grid-template-columns:60px 1fr auto;align-items:center;gap:22px;padding:32px max(7vw,calc((100vw - 1160px)/2)) 38px;background:#e9eee8}
+    .work-note-mark{font:italic 34px var(--serif);color:#82998d}
+    .work-note p{font:italic clamp(22px,3vw,34px)/1.25 var(--serif);margin:0;max-width:680px}
+    .work-note p em{color:#718b83}
+    .work-note-caption{font-size:9px;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);max-width:150px}
+    .offer{padding:100px 0 105px;background:var(--deep)}
+    .offer .section-head{margin-bottom:35px}
+    .offer-grid{border:0;gap:12px}
+    .offer-item,.offer-item+.offer-item{padding:24px 22px 26px;background:#ffffff0b;border:1px solid #ffffff24;border-radius:2px;min-height:205px}
+    .offer-item h3{font-size:26px;margin:21px 0 10px}
+    .offer-item p{font-size:11px;line-height:1.85}
+    .studio-promise{display:grid;grid-template-columns:180px 1fr auto;gap:25px;align-items:center;padding:35px 0;margin-top:38px;border-top:1px solid #ffffff30;border-bottom:1px solid #ffffff30}
+    .studio-promise .eyebrow{color:#a9bdb2}
+    .studio-promise p{font:400 clamp(25px,3.4vw,42px)/1.18 var(--serif);margin:0;color:#f5f3ed}
+    .studio-promise p em{color:#b9cbbf}
+    .studio-promise-foot{font-size:10px;line-height:1.7;color:#c0cbc4;max-width:170px}
+    .offer-process{margin-top:38px}
+    .offer-process-head{margin-bottom:18px}
+    .offer-steps{gap:20px}
+    .offer-steps>div{padding:15px 12px 0 0}
+    .offer-steps h3{font-size:23px}
+    .deliverables{margin-top:42px;padding-top:27px}
+    .deliverables-heading h3{font-size:clamp(32px,3.8vw,44px)}
+    .deliverable-grid{gap:10px}
+    .deliverable-card{min-height:132px;padding:20px 18px;grid-template-columns:28px 1fr auto;border-radius:2px}
+    .deliverable-card h4{font-size:21px}
+    .deliverable-card p{font-size:10px;line-height:1.7}
+    .deliverable-tag{font-size:7px}
+    .deliverables-included{grid-template-columns:120px 1fr}
+    .contact{padding:105px 0 95px;background:#dfe8df}
+    .contact h2{font-size:clamp(54px,7vw,86px)}
+    .contact-email-placeholder{background:var(--deep);color:#fff;border-color:var(--deep);border-radius:2px;padding:13px 22px}
+    footer{padding:28px 0}
+    .footer-brand{font-size:22px}
+    .memory-section,.moments-section{display:none}
+    @media(max-width:800px){
+      .wrap{width:88vw}
+      .nav-inner{width:92vw;height:70px}
+      .nav-links{gap:10px;font-size:8px}
+      .hero{height:auto;min-height:0;padding:122px 0 66px}
+      .hero-grid{grid-template-columns:1fr;gap:28px}
+      .hero h1{font-size:clamp(60px,13vw,88px)}
+      .hero-visual{height:440px}
+      .about{padding:78px 0}
+      .about-grid{grid-template-columns:1fr;gap:35px}
+      .about-image{height:390px}
+      .about-image img{width:88%}
+      .story-grid{grid-template-columns:1fr 1fr;gap:24px 14px}
+      .story-card:nth-child(2),.story-card:nth-child(3){margin-top:0}
+      .story-card:first-child{grid-column:span 2}
+      .story-card:first-child .story-image{height:350px}
+      .story-image{height:270px}
+      .work-section .reel-section{height:150vh;margin-top:48px}
+      .reel-heading,.memory-heading{display:block}
+      .reel-heading p{margin-top:12px}
+      .reel-sticky{padding-top:76px}
+      .reel-card{width:180px}
+      .work-note{grid-template-columns:35px 1fr;gap:12px;padding:24px 6vw}
+      .work-note-caption{grid-column:2;max-width:none}
+      .offer{padding:78px 0}
+      .offer-grid{grid-template-columns:1fr}
+      .offer-item,.offer-item+.offer-item{min-height:0;padding:21px}
+      .offer-item h3{margin:10px 0 7px}
+      .studio-promise{grid-template-columns:1fr;gap:12px;padding:25px 0}
+      .studio-promise-foot{max-width:280px}
+      .offer-process{margin-top:30px}
+      .offer-steps{grid-template-columns:1fr;gap:14px}
+      .offer-steps>div{display:grid;grid-template-columns:30px 1fr;column-gap:10px}
+      .offer-steps span{grid-row:span 2}
+      .offer-steps h3{margin:0 0 3px}
+      .offer-steps p{grid-column:2}
+      .deliverable-grid{grid-template-columns:1fr}
+      .deliverables-included{grid-template-columns:1fr;gap:8px}
+      .contact{padding:80px 0}
+    }
+    @media(max-width:480px){
+      .nav-inner{width:94vw}
+      .nav-links{gap:6px;font-size:7px}
+      .nav-cta{padding:7px 8px}
+      .brand{font-size:17px}
+      .hero-visual{height:360px}
+      .hero-stamp{width:105px;height:105px;font-size:14px}
+      .about-image{height:330px}
+      .about-copy h2{font-size:46px}
+      .sister-card{min-width:calc(50% - 6px);padding:9px}
+      .story-grid{grid-template-columns:1fr}
+      .story-card:first-child{grid-column:auto}
+      .story-card:first-child .story-image,.story-image{height:340px}
+      .work-section .reel-section{height:130vh}
+      .reel-card{width:165px}
+      .work-note{padding:22px 6vw}
+      .deliverable-card{grid-template-columns:24px 1fr;gap:9px}
+      .deliverable-tag{grid-column:2;justify-self:start}
+      .contact h2{font-size:58px}
+      .footer-inner{gap:9px}
+    }
+    @media(prefers-reduced-motion:reduce){
+      .work-section .reel-section{height:auto}
+      .reel-sticky{position:relative;height:auto;padding:45px 0}
+      .reel-track{width:100%;overflow-x:auto;transform:none!important}
+      .reel-card{rotate:0deg!important;translate:0 0!important}
+    }
+
   </style>
 </head>
 <body>
@@ -312,7 +471,7 @@
     </div></section>
     <section class="stories work-section" id="work">
       <div class="wrap">
-        <div class="section-head reveal"><div><div class="eyebrow">Our work, so far</div><h2>Scenes from <em class="italic">somewhere.</em></h2></div><p>Concept frames while we shoot our first stays. Real work goes here as we make it.</p></div>
+        <div class="section-head reveal"><div><div class="eyebrow">Our work, so far</div><h2>Scenes from <em class="italic">somewhere.</em></h2></div><p>A glimpse of the stories we love to tell. Our own shoots will find their place here soon.</p></div>
       <div class="story-grid">
         <article class="story-card reveal"><div class="story-image"><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1510798831971-661eb04b3739?auto=format&fit=crop&w=900&q=85" alt="A quiet cabin tucked into a green landscape"></div><div class="story-meta"><div><h3>The quiet escape</h3><p>Cabins · slow travel</p></div><span>01</span></div></article>
         <article class="story-card reveal"><div class="story-image"><img loading="lazy" decoding="async" src="https://images.unsplash.com/photo-1516483638261-f4dbaf036963?auto=format&fit=crop&w=900&q=85" alt="Colourful coastal village overlooking the sea"></div><div class="story-meta"><div><h3>Somewhere by the sea</h3><p>Places · destination stories</p></div><span>02</span></div></article>
@@ -321,28 +480,13 @@
       </div>
     <div class="reel-section" id="reels">
       <div class="reel-sticky">
-        <div class="reel-heading"><div><div class="eyebrow">Short-form video concepts</div><h2>Stay reels & guest POV</h2></div><p>Concept frames for the kinds of vertical stories we want to make for stays.</p></div>
+        <div class="reel-heading"><div><div class="eyebrow">Short-form video concepts</div><h2>Stay reels & guest POV</h2></div><p>Three story directions we can shape around the character of each property.</p></div>
         <div class="reel-track" id="reelTrack"></div>
         <div class="reel-progress"><i id="reelProgress"></i></div>
       </div>
     </div>
 
-      <div class="memory-section" id="frames">
-        <div class="wrap">
-          <div class="memory-heading"><div><div class="eyebrow">Photo concepts</div><h2>Little details, big feeling.</h2></div><p>Concept frames for the light, textures and small moments that make a stay memorable.</p></div>
-        <div class="memory-grid">
-          <div class="memory-tile tall" aria-label="Concept image: golden hour"><div class="memory-fill tone-1"></div><em>golden hour</em></div>
-          <div class="memory-tile" aria-label="Concept image"><div class="memory-fill tone-2"></div></div>
-          <div class="memory-tile tall"><div class="memory-fill tone-3"></div><em>sea view</em></div>
-          <div class="memory-tile wide" aria-label="Concept image"><div class="memory-fill tone-4"></div></div>
-          <div class="memory-tile"><div class="memory-fill tone-5"></div></div>
-          <div class="memory-tile"><div class="memory-fill tone-6"></div><em>the little details</em></div>
-          <div class="memory-tile wide"><div class="memory-fill tone-7"></div></div>
-          <div class="memory-tile"><div class="memory-fill tone-8"></div></div>
-        </div>
-        </div>
-<div class="moments-section" aria-label="More concept photo frames"><div class="moment-row" data-direction="1"></div></div>
-      </div>
+      <div class="work-note"><span class="work-note-mark">✳</span><p>We look for the details that make a place feel like <em>somewhere.</em></p><span class="work-note-caption">A point of view, not just a room tour.</span></div>
     </section>
 
     <section class="offer" id="offer"><div class="wrap">
@@ -352,6 +496,7 @@
         <article class="offer-item reveal"><div class="offer-num">02 /</div><h3>Photos</h3><p>8 to 10 edited photos of rooms, details, food and golden hour.</p></article>
         <article class="offer-item reveal"><div class="offer-num">03 /</div><h3>Mood board and shot list</h3><p>When a property is interested, we put together a short plan made for that place, so you can see the idea before we shoot.</p></article>
       </div>
+      <div class="studio-promise reveal"><span class="eyebrow">Our approach</span><p>Not just what a place <em>looks like.</em><br>What it feels like to be there.</p><span class="studio-promise-foot">Planned around your property, made for your channels.</span></div>
       <div class="offer-process reveal">
         <div class="offer-process-head"><div class="eyebrow">How it works</div><p>Three simple steps.</p></div>
         <div class="offer-steps">
@@ -383,13 +528,9 @@
     const reelProgress = document.getElementById('reelProgress');
     const reelSection = document.querySelector('.reel-section');
     const reelBriefs = [
-      ['Aesthetic morning reel','Soft light, slow coffee and the first look outside.','tone-2'],
-      ['Room tour walk-through','A guest-perspective reveal of the room and its details.','tone-1'],
-      ['Golden hour at the stay','The property as the light changes through the evening.','tone-5'],
-      ['A day at the stay','Small moments from check-in to winding down.','tone-3'],
-      ['Breakfast and details','Textures, table settings and the first meal of the day.','tone-6'],
-      ['Pool, garden and views','A sense of the space beyond the room.','tone-4'],
-      ['The evening mood','Warm lights, quiet corners and the final frame.','tone-8']
+      ['The first morning','Soft light, slow coffee and the first look outside.','tone-2'],
+      ['A room to remember','A guest-perspective reveal of the room and its details.','tone-1'],
+      ['The golden hour edit','The property as the light changes through the evening.','tone-5']
     ];
     reelTrack.innerHTML = reelBriefs.map((item,i) => '<article class="reel-card"><div class="reel-phone"><div class="memory-fill '+item[2]+'" style="position:absolute;inset:0"></div><div class="reel-play">▶</div></div><p class="reel-caption"><b>Story '+String(i+1).padStart(2,'0')+'</b><br>'+item[0]+'<br>'+item[1]+'</p></article>').join('');
     const reelCards = [...document.querySelectorAll('.reel-card')];
