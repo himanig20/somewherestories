@@ -543,6 +543,28 @@
       .reel-card{rotate:0deg!important;translate:0 0!important}
     }
 
+
+    /* Reliable scroll distance for the complete six-card reel strip */
+    .work-section .reel-section{height:320vh!important;overflow:clip!important}
+    .work-section .reel-sticky{position:sticky!important;top:0;height:100vh;overflow:hidden}
+    .reel-track{width:max-content!important;max-width:none!important;justify-content:flex-start!important;flex-wrap:nowrap!important;gap:clamp(22px,3.5vw,48px)!important;transform:translate3d(0,0,0);will-change:transform}
+    .reel-card{flex:0 0 clamp(175px,18vw,220px)!important;width:clamp(175px,18vw,220px)!important}
+    @media(max-width:800px){
+      .work-section .reel-section{height:280vh!important}
+      .reel-track{gap:18px!important;padding-left:6vw!important;padding-right:6vw!important}
+      .reel-card{flex:0 0 clamp(155px,28vw,190px)!important;width:clamp(155px,28vw,190px)!important}
+    }
+    @media(max-width:480px){
+      .work-section .reel-section{height:245vh!important}
+      .reel-card{flex:0 0 44vw!important;width:44vw!important}
+    }
+    @media(prefers-reduced-motion:reduce){
+      .work-section .reel-section{height:auto!important;overflow:visible!important}
+      .work-section .reel-sticky{position:relative!important;top:auto;height:auto;overflow:visible;padding:52px 0}
+      .reel-track{width:100%!important;max-width:100%!important;overflow-x:auto!important;transform:none!important;scroll-snap-type:x mandatory;padding:10px 6vw 18px!important}
+      .reel-card{flex:0 0 min(72vw,220px)!important;width:min(72vw,220px)!important;scroll-snap-align:center;rotate:0deg!important;translate:0 0!important}
+    }
+
   </style>
 </head>
 <body>
@@ -656,22 +678,24 @@
     const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
     const stripOffsets = [0,0];
     function updateStoryMotion(){
+      const bounds = reelSection.getBoundingClientRect();
+      const range = Math.max(1, reelSection.offsetHeight - window.innerHeight);
+      const progress = Math.min(1, Math.max(0, -bounds.top / range));
+      const sidePadding = window.innerWidth <= 800 ? window.innerWidth * 0.06 : window.innerWidth * 0.07;
+      const visibleTrackWidth = Math.max(1, window.innerWidth - sidePadding * 2);
+      const maxShift = Math.max(0, reelTrack.scrollWidth - visibleTrackWidth);
       if(reducedMotion){
-        reelTrack.style.transform='none';
-        reelProgress.style.width='100%';
+        reelTrack.style.transform = 'none';
+        reelProgress.style.width = '100%';
         return;
       }
-      const bounds=reelSection.getBoundingClientRect();
-      const range=Math.max(1,reelSection.offsetHeight-window.innerHeight);
-      const progress=Math.min(1,Math.max(0,-bounds.top/range));
-      const maxShift=Math.max(0,reelTrack.scrollWidth-window.innerWidth+window.innerWidth*.12);
-      reelTrack.style.transform='translateX('+(-progress*maxShift)+'px)';
-      reelProgress.style.width=(progress*100)+'%';
-      reelCards.forEach(card=>{
-        const rect=card.getBoundingClientRect();
-        const center=(rect.left+rect.width/2-window.innerWidth/2)/window.innerWidth;
-        card.style.rotate=(center*3)+'deg';
-        card.style.translate='0 '+(Math.abs(center)*12)+'px';
+      reelTrack.style.transform = 'translate3d('+(-progress * maxShift)+'px,0,0)';
+      reelProgress.style.width = (progress * 100) + '%';
+      reelCards.forEach(card => {
+        const rect = card.getBoundingClientRect();
+        const center = (rect.left + rect.width / 2 - window.innerWidth / 2) / window.innerWidth;
+        card.style.rotate = (center * 2.5) + 'deg';
+        card.style.translate = '0 ' + (Math.abs(center) * 9) + 'px';
       });
     }
     let storyTick=false;
