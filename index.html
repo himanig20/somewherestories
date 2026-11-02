@@ -80,6 +80,10 @@
     @media(max-width:800px){.reel-heading,.memory-heading{display:block}.reel-heading p,.memory-heading p{margin-top:15px}.memory-grid{grid-template-columns:repeat(2,1fr);grid-auto-rows:135px}.reel-section{height:260vh}.reel-card{width:min(205px,62vw)}.vision-section{padding:85px 0}.moments-section{padding:60px 0}}
     @media(max-width:480px){.memory-grid{grid-auto-rows:115px;gap:7px}.reel-heading h2,.memory-heading h2,.vision-heading h2{font-size:39px}.reel-heading{margin-bottom:12px}.reel-section{height:245vh}.reel-sticky{padding-top:75px}.reel-card{width:190px}.vision-moodboard{grid-auto-rows:60px}}
     @media(prefers-reduced-motion:reduce){.reel-card,.moment-row,.memory-tile,.memory-fill{transition:none!important;animation:none!important}}
+    /* Keep memory placeholders visible even if reveal observers are unavailable */
+    .memory-tile{clip-path:none!important;opacity:1!important;visibility:visible!important}
+    .memory-tile .memory-fill{display:block!important;opacity:1!important}
+
 
   </style>
 </head>
